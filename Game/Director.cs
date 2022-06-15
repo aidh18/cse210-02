@@ -41,10 +41,14 @@ namespace cse210_02.Game
         /// Asks the user if they want to roll.
         /// </summary>
         public void GetInputs()
-        {
-            Console.Write("Play game? [y/n] ");
-            string flipCard = Console.ReadLine();
-            isPlaying = (flipCard == "y");
+        {   
+            
+            Console.Write("Higher or lower? [h/l] ");
+            string hiLoGuess = Console.ReadLine();
+
+
+
+            // isPlaying = (flipCard == "y");
         }
 
         /// <summary>
