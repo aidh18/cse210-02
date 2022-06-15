@@ -1,7 +1,7 @@
-﻿using Unit02.Game;
+﻿using cse210_02.Game;
 
 
-namespace Unit02
+namespace cse210_02
 {
     /// <summary>
     /// The program's entry point.

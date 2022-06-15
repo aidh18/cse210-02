@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace Unit02.Game
+namespace cse210_02.Game
 {
     // <summary>
     // A person who directs the game. 
@@ -11,7 +11,7 @@ namespace Unit02.Game
     // </summary>
     public class Director
     {
-        List<Card> deck = new List<Card>();
+        // List<Card> deck = new List<Card>();
         bool isPlaying = true;
         int score = 0;
         int totalScore = 0;
@@ -21,11 +21,7 @@ namespace Unit02.Game
         // </summary>
         public Director()
         {
-            for (int i = 0; i < 5; i++)
-            {
-                Card card = new Card();
-                deck.Add(card);
-            }
+            Card card = new Card();
         }
 
         /// <summary>
@@ -47,7 +43,7 @@ namespace Unit02.Game
         public void GetInputs()
         {
             Console.Write("Play game? [y/n] ");
-            string card = Console.ReadLine();
+            string flipCard = Console.ReadLine();
             isPlaying = (flipCard == "y");
         }
 
@@ -64,8 +60,8 @@ namespace Unit02.Game
             score = 300;
             foreach (Card card in cards)
             {
-                die.Roll();
-                score += die.points;
+                card.Draw();
+                score += card.points;
             }
             totalScore += score;
         }
