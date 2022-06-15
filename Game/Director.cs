@@ -24,9 +24,9 @@ namespace cse210_02.Game
         {
         }
 
-        /// <summary>
-        /// Starts the game by running the main game loop.
-        /// </summary>
+        // <summary>
+        // Starts the game by running the main game loop.
+        // </summary>
         public void StartGame()
         {
             while (isPlaying)
@@ -37,9 +37,9 @@ namespace cse210_02.Game
             }
         }
 
-        /// <summary>
-        /// Asks the user if they want to play again and their guess.
-        /// </summary>
+        // <summary>
+        // Asks the user if they want to play again and their guess.
+        // </summary>
         public void GetInputs()
         {   
             // Ask user to play again.
@@ -60,9 +60,9 @@ namespace cse210_02.Game
             guessIsHigher = (Console.ReadLine() == "h");
         }
 
-        /// <summary>
-        /// Updates the player's score.
-        /// </summary>
+        // <summary>
+        // Updates the player's score.
+        // </summary>
         public void DoUpdates()
         {   
             // If game is over end game.
@@ -99,9 +99,9 @@ namespace cse210_02.Game
             
         }
 
-        /// <summary>
-        /// Displays the next card and the score.  
-        /// </summary>
+        // <summary>
+        // Displays the next card and the score.  
+        // </summary>
         public void DoOutputs()
         {   
             // If game is over end game.

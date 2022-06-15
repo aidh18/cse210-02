@@ -3,9 +3,9 @@
 
 namespace cse210_02
 {
-    /// <summary>
-    /// The program's entry point.
-    /// </summary>
+    // <summary>
+    // The program's entry point.
+    // </summary>
     class Program
     {
         // <summary>
