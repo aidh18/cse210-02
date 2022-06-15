@@ -7,7 +7,7 @@ namespace cse210_02.Game
     {
         public int value = 0;
 
-        public Card
+        public Card()
         {
         }
 

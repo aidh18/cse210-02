@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace Unit02.Game
 {
-    /// <summary>
-    /// A person who directs the game. 
-    ///
-    /// The responsibility of a Director is to control the sequence of play.
-    /// </summary>
+    // <summary>
+    // A person who directs the game. 
+    //
+    // The responsibility of a Director is to control the sequence of play.
+    // </summary>
     public class Director
     {
         List<Card> deck = new List<Card>();
@@ -16,9 +16,9 @@ namespace Unit02.Game
         int score = 0;
         int totalScore = 0;
 
-        /// <summary>
-        /// Constructs a new instance of Director.
-        /// </summary>
+        // <summary>
+        // Constructs a new instance of Director.
+        // </summary>
         public Director()
         {
             for (int i = 0; i < 5; i++)
