@@ -22,6 +22,7 @@ namespace cse210_02.Game
         // </summary>
         public Director()
         {
+            card.Draw();
         }
 
         // <summary>
