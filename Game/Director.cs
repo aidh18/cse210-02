@@ -13,7 +13,6 @@ namespace cse210_02.Game
     {
         // List<Card> deck = new List<Card>();
         bool isPlaying = true;
-        int score = 300;
         int totalScore = 300;
         Card card = new Card();
         bool guessIsHigher = false;
@@ -39,7 +38,7 @@ namespace cse210_02.Game
         }
 
         /// <summary>
-        /// Asks the user if they want to roll.
+        /// Asks the user if they want to play again and their guess.
         /// </summary>
         public void GetInputs()
         {   
@@ -81,31 +80,42 @@ namespace cse210_02.Game
             // Find out if guess was correct or not.
             bool valueIsHigher = (card.value > lastValue);
 
-            if (!(valueIsHigher ^ guessIsHigher)) {
+            // Use an xor to figure out player points. 
+            int points = 0;
+
+            if (valueIsHigher ^ guessIsHigher) {
+
+                // Incorrect guess.
+                points = -75;
+
+            } else {
                 
+                // Correct guess.
+                points = 100;
             }
+
+            // Add points to total score.
+            totalScore += points;
             
         }
 
         /// <summary>
-        /// Displays the dice and the score. Also asks the player if they want to roll again. 
+        /// Displays the next card and the score.  
         /// </summary>
         public void DoOutputs()
-        {
+        {   
+            // If game is over end game.
             if (!isPlaying)
             {
                 return;
             }
 
-            string values = "";
-            foreach (Card card in Cards)
-            {
-                values += $"{card.value} ";
-            }
-
-            Console.WriteLine($"You rolled: {values}");
+            // Output to user.
+            Console.WriteLine($"Next card was: {card.value}");
             Console.WriteLine($"Your score is: {totalScore}\n");
-            isPlaying = (score > 0);
+
+            // Check end game conditions.
+            isPlaying = (totalScore > 0);
         }
     }
 }
