@@ -11,7 +11,7 @@ namespace Unit02.Game
     /// </summary>
     public class Director
     {
-        List<Card> cards = new List<Card>();
+        List<Card> deck = new List<Card>();
         bool isPlaying = true;
         int score = 0;
         int totalScore = 0;
@@ -24,7 +24,7 @@ namespace Unit02.Game
             for (int i = 0; i < 5; i++)
             {
                 Card card = new Card();
-                cards.Add(card);
+                deck.Add(card);
             }
         }
 
