@@ -13,15 +13,16 @@ namespace cse210_02.Game
     {
         // List<Card> deck = new List<Card>();
         bool isPlaying = true;
-        int score = 0;
-        int totalScore = 0;
+        int score = 300;
+        int totalScore = 300;
+        Card card = new Card();
+        bool guessIsHigher = false;
 
         // <summary>
         // Constructs a new instance of Director.
         // </summary>
         public Director()
         {
-            Card card = new Card();
         }
 
         /// <summary>
@@ -42,32 +43,48 @@ namespace cse210_02.Game
         /// </summary>
         public void GetInputs()
         {   
-            
-            Console.Write("Higher or lower? [h/l] ");
-            string hiLoGuess = Console.ReadLine();
+            // Ask user to play again.
+            Console.Write("\nPlay again? [y/n] ");
 
+            // If the users says no end game.
+            isPlaying = (Console.ReadLine() == "y");
 
+            if (!isPlaying) {
+                return;
+            }
 
-            // isPlaying = (flipCard == "y");
+            // Print value so that user can make a guess.
+            Console.WriteLine($"The card is: {card.value}.");
+
+            // GET guess.
+            Console.Write("Higher or lower? [h/l] ");            
+            guessIsHigher = (Console.ReadLine() == "h");
         }
 
         /// <summary>
         /// Updates the player's score.
         /// </summary>
         public void DoUpdates()
-        {
+        {   
+            // If game is over end game.
             if (!isPlaying)
             {
                 return;
             }
+            
+            // Create variable to store last card value before changed.
+            int lastValue = card.value;
 
-            score = 300;
-            foreach (Card card in cards)
-            {
-                card.Draw();
-                score += card.points;
+            // Generate new card value.
+            card.Draw();
+
+            // Find out if guess was correct or not.
+            bool valueIsHigher = (card.value > lastValue);
+
+            if (!(valueIsHigher ^ guessIsHigher)) {
+                
             }
-            totalScore += score;
+            
         }
 
         /// <summary>
