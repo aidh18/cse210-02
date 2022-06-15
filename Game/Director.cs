@@ -48,7 +48,7 @@ namespace Unit02.Game
         {
             Console.Write("Play game? [y/n] ");
             string card = Console.ReadLine();
-            isPlaying = (rollDice == "y");
+            isPlaying = (flipCard == "y");
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Unit02.Game
                 return;
             }
 
-            score = 0;
+            score = 300;
             foreach (Card card in cards)
             {
                 die.Roll();
@@ -81,9 +81,9 @@ namespace Unit02.Game
             }
 
             string values = "";
-            foreach (Die die in dice)
+            foreach (Card card in Cards)
             {
-                values += $"{die.value} ";
+                values += $"{card.value} ";
             }
 
             Console.WriteLine($"You rolled: {values}");
