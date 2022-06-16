@@ -123,6 +123,11 @@ namespace cse210_02.Game
 
             // Check end game conditions.
             isPlaying = (totalScore > 0);
+
+            if (!isPlaying)
+            {
+                Console.WriteLine("Game Over");
+            }
         }
     }
 }
