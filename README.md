@@ -1,23 +1,28 @@
 # Hilo
-Are you willing to risk everything? Play Dice and you might be surprised. The rules are simple. Roll 
-the dice. Count the ones and fives. Each one is worth 100 and 50 points respectively. As long as you 
-roll at least a one or a five you can try again. If not the game is over.
+Are you willing to risk everything? Play Hilo and you might be surprised. The rules are simple. Draw 
+a card. Guess higher or lower. If you are correct, you get 100 point. If you're wrong, lose 50 points. As long as you 
+have more than 0 points, you can continue. If not, the game is over.
 
 ## Project Structure
 ---
 The project files and folders are organized as follows:
 ```
 root                    (project root folder)
-+-- dice                (source code for game)
-  +-- game              (specific classes)
-  +-- __main__.py       (program entry point)
++-- Game                (source code for game)
+  +-- Card.cs           (specific class)
+  +-- Director.cs       (control system)
++-- Program.cs          (program entry point)
 +-- README.md           (general info)
 ```
 
 ## Required Technologies
 ---
-* Python 3.8.0
+* C#
+* DotNet 6
 
 ## Authors
 ---
-* Matt Manley (manleym@byui.edu)
+* Stetson Wendel
+* Andrew Leland
+* Josh Shafer
+* Aidan Stacey
