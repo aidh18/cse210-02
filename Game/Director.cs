@@ -11,7 +11,7 @@ namespace cse210_02.Game
     // </summary>
     public class Director
     {
-        // List<Card> deck = new List<Card>();
+        bool firstPlay = true;
         bool isPlaying = true;
         int totalScore = 300;
         Card card = new Card();
@@ -43,11 +43,14 @@ namespace cse210_02.Game
         // </summary>
         public void GetInputs()
         {   
-            // Ask user to play again.
-            Console.Write("Play again? [y/n]");
+            if (!firstPlay)
+            {
+                // Ask user to play again.
+                Console.Write("Play again? [y/n] ");
 
-            // If the users says no end game.
-            isPlaying = (Console.ReadLine() == "y");
+                // If the users says no end game.
+                isPlaying = (Console.ReadLine() == "y");
+            }
 
             if (!isPlaying) {
                 return;
