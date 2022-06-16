@@ -1,6 +1,6 @@
 # Hilo
 Are you willing to risk everything? Play Hilo and you might be surprised. The rules are simple. Draw 
-a card. Guess higher or lower. If you are correct, you get 100 point. If you're wrong, lose 50 points. As long as you 
+a card. Guess higher or lower. If you are correct, you get 100 points. If you're wrong, lose 75 points. As long as you 
 have more than 0 points, you can continue. If not, the game is over.
 
 ## Project Structure
