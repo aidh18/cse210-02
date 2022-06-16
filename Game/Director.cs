@@ -51,6 +51,9 @@ namespace cse210_02.Game
                 // If the users says no end game.
                 isPlaying = (Console.ReadLine() == "y");
             }
+            else {
+                firstPlay = false;
+            }
 
             if (!isPlaying) {
                 return;
