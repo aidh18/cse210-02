@@ -44,10 +44,10 @@ namespace cse210_02.Game
         public void GetInputs()
         {   
             // Ask user to play again.
-            Console.Write("\nPlay again? [y/n] ");
+            // Console.Write("\nPlay again? [y/n] ");
 
-            // If the users says no end game.
-            isPlaying = (Console.ReadLine() == "y");
+            // // If the users says no end game.
+            // isPlaying = (Console.ReadLine() == "y");
 
             if (!isPlaying) {
                 return;
@@ -117,6 +117,15 @@ namespace cse210_02.Game
 
             // Check end game conditions.
             isPlaying = (totalScore > 0);
+
+            if (!isPlaying)
+            {
+                // Ask user to play again.
+            Console.Write("\nPlay again? [y/n] ");
+
+            // If the users says no end game.
+            isPlaying = (Console.ReadLine() == "y");
+            }
         }
     }
 }
