@@ -53,8 +53,8 @@ namespace cse210_02.Game
                 return;
             }
 
-            // Print value so that user can make a guess.
-            Console.WriteLine($"The card is: {card.value}.");
+            // Print card name so that user can make a guess.
+            Console.WriteLine($"The card is: {card.name}.");
 
             // GET guess.
             Console.Write("Higher or lower? [h/l] ");            
@@ -112,7 +112,7 @@ namespace cse210_02.Game
             }
 
             // Output to user.
-            Console.WriteLine($"Next card was: {card.value}");
+            Console.WriteLine($"Next card was: {card.name}");
             Console.WriteLine($"Your score is: {totalScore}\n");
 
             // Check end game conditions.
