@@ -44,17 +44,17 @@ namespace cse210_02.Game
         public void GetInputs()
         {   
             // Ask user to play again.
-            // Console.Write("\nPlay again? [y/n] ");
+            Console.Write("Play again? [y/n]");
 
-            // // If the users says no end game.
-            // isPlaying = (Console.ReadLine() == "y");
+            // If the users says no end game.
+            isPlaying = (Console.ReadLine() == "y");
 
             if (!isPlaying) {
                 return;
             }
 
             // Print card name so that user can make a guess.
-            Console.WriteLine($"The card is: {card.name}.");
+            Console.WriteLine($"\nThe card is: {card.name}.");
 
             // GET guess.
             Console.Write("Higher or lower? [h/l] ");            
@@ -113,19 +113,10 @@ namespace cse210_02.Game
 
             // Output to user.
             Console.WriteLine($"Next card was: {card.name}");
-            Console.WriteLine($"Your score is: {totalScore}\n");
+            Console.WriteLine($"Your score is: {totalScore}");
 
             // Check end game conditions.
             isPlaying = (totalScore > 0);
-
-            if (!isPlaying)
-            {
-                // Ask user to play again.
-            Console.Write("\nPlay again? [y/n] ");
-
-            // If the users says no end game.
-            isPlaying = (Console.ReadLine() == "y");
-            }
         }
     }
 }
