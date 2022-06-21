@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace Jumper.Game
+namespace cse210_02.Game
 {
     // <summary>
     // A person who directs the game. 
